@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.0.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -5779,8 +5779,9 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="41" curve="-180"/>
 <wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="180"/>
 <wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="-180"/>
-<circle x="0" y="0" radius="2.794" width="0.127" layer="39"/>
+<circle x="0" y="0" radius="2.794" width="0.127" layer="42"/>
 <hole x="0" y="0" drill="3.048"/>
+<circle x="0" y="0" radius="2.794" width="0.127" layer="41"/>
 </package>
 </packages>
 <symbols>
@@ -5789,7 +5790,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="STAND-OFF" prefix="STANDOFF">
+<deviceset name="STAND-OFF" prefix="H">
 <description>&lt;b&gt;#4 Stand Off&lt;/b&gt;&lt;p&gt;
 This is the mechanical footprint for a #4 phillips button head screw. Use the keepout ring to avoid running the screw head into surrounding components. SKU : PRT-00447</description>
 <gates>
@@ -15935,10 +15936,10 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <part name="Q1" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="FDD8780"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="R4" library="resistor" deviceset="R-EU_" device="M0805" value="22R"/>
-<part name="STANDOFF1" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device="TIGHT"/>
-<part name="STANDOFF2" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device="TIGHT"/>
-<part name="STANDOFF3" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device="TIGHT"/>
-<part name="STANDOFF4" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device="TIGHT"/>
+<part name="STANDOFF1" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device="TIGHT" value="STAND-OFFTIGHT"/>
+<part name="STANDOFF2" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device="TIGHT" value="STAND-OFFTIGHT"/>
+<part name="STANDOFF3" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device="TIGHT" value="STAND-OFFTIGHT"/>
+<part name="STANDOFF4" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device="TIGHT" value="STAND-OFFTIGHT"/>
 <part name="R2" library="pot" deviceset="TRIM_EU-" device="B64Y" value="47K"/>
 </parts>
 <sheets>
