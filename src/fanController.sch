@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.6.0">
+<eagle version="8.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -14155,7 +14155,7 @@ High-power, low thermal resistance package.</description>
 <parts>
 <part name="IC1" library="SparkFun-AnalogIC" deviceset="NE555" device="D"/>
 <part name="FRAME1" library="frames" deviceset="DINA4_L" device=""/>
-<part name="R1" library="resistor" deviceset="R-EU_" device="M0805" value="4K7"/>
+<part name="R1" library="resistor" deviceset="R-EU_" device="M0805" value="1K"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="C1" library="resistor" deviceset="C-EU" device="C0805" value="0.1uF"/>
@@ -14172,7 +14172,7 @@ High-power, low thermal resistance package.</description>
 <part name="X2" library="con-ptr500" deviceset="AK500/2" device=""/>
 <part name="D3" library="diode" deviceset="MBR0520LT" device=""/>
 <part name="P+4" library="supply1" deviceset="VCC" device=""/>
-<part name="Q1" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="FDD8780"/>
+<part name="Q1" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="FDD8780" value="IPD90N03S4L-03"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="R4" library="resistor" deviceset="R-EU_" device="M0805" value="22R"/>
 <part name="STANDOFF1" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device="TIGHT" value="STAND-OFFTIGHT"/>
@@ -14184,7 +14184,12 @@ High-power, low thermal resistance package.</description>
 <sheets>
 <sheet>
 <plain>
-<text x="30.734" y="62.484" size="1.778" layer="97">PTD901-1015F-B203</text>
+<text x="21.844" y="62.992" size="1.778" layer="97">PTD901-2015K-B104 - 100K</text>
+<text x="83.82" y="154.94" size="5.08" layer="97" ratio="12">DC Dimmer controller</text>
+<text x="256.54" y="7.62" size="2.54" layer="97" ratio="12">A</text>
+<text x="45.72" y="22.86" size="1.778" layer="97" ratio="12">License: CERN OSHWReleased under the CERN Open Hardware Licence v1.2 
+http://www.ohwr.org/attachments/2388/cern_ohl_v_1_2.txt
+Copyright (c) 2017 - by F. Malpartida </text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="88.9" y="76.2"/>
@@ -14199,12 +14204,12 @@ High-power, low thermal resistance package.</description>
 <instance part="P+2" gate="VCC" x="43.18" y="104.14"/>
 <instance part="GND2" gate="1" x="68.58" y="53.34"/>
 <instance part="D1" gate="G$1" x="38.1" y="81.28" smashed="yes" rot="R90">
-<attribute name="NAME" x="36.0934" y="80.264" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="33.8074" y="68.58" size="1.778" layer="96" rot="R90"/>
+<attribute name="NAME" x="39.37" y="88.1634" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="34.8234" y="73.152" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="D2" gate="G$1" x="48.26" y="81.28" smashed="yes" rot="R270">
-<attribute name="NAME" x="50.0126" y="85.852" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="52.8066" y="85.852" size="1.778" layer="96" rot="R270"/>
+<attribute name="NAME" x="46.482" y="85.5726" size="1.778" layer="95"/>
+<attribute name="VALUE" x="50.2666" y="88.392" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="X1" gate="-1" x="96.52" y="124.46"/>
 <instance part="X1" gate="-2" x="96.52" y="119.38"/>
@@ -14390,4 +14395,10 @@ High-power, low thermal resistance package.</description>
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
