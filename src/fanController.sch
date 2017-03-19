@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.6.0">
+<eagle version="8.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -14332,10 +14332,10 @@ http://www.micrel.com/_PDF/mic4420.pdf</description>
 <part name="STANDOFF2" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device="TIGHT" value="STAND-OFFTIGHT"/>
 <part name="STANDOFF3" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device="TIGHT" value="STAND-OFFTIGHT"/>
 <part name="STANDOFF4" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device="TIGHT" value="STAND-OFFTIGHT"/>
-<part name="IC2" library="SparkFun-AnalogIC" deviceset="NE555" device="D"/>
+<part name="IC2" library="SparkFun-AnalogIC" deviceset="NE555" device="D" value="NE555"/>
 <part name="P+5" library="supply1" deviceset="VCC" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="R5" library="SparkFun-Electromechanical" deviceset="TRIMPOT" device="-PTH-KNOB" value="TSR-3386"/>
+<part name="R5" library="SparkFun-Electromechanical" deviceset="TRIMPOT" device="-PTH-KNOB" value="TSR-3386-100K"/>
 <part name="D4" library="diode" deviceset="MBR0520LT" device=""/>
 <part name="D5" library="diode" deviceset="MBR0520LT" device=""/>
 <part name="C5" library="resistor" deviceset="C-EU" device="C0805" value="10nF"/>
@@ -14347,10 +14347,17 @@ http://www.micrel.com/_PDF/mic4420.pdf</description>
 <part name="IC1" library="transistor-power" deviceset="MIC4420" device="M"/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
+<part name="C1" library="resistor" deviceset="C-EU" device="C0805" value="0.1uF"/>
+<part name="C2" library="resistor" deviceset="C-EU" device="C0805" value="0.1uF"/>
+<part name="GND7" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="68.58" y="25.4" size="1.778" layer="97">Released under the CERN Open Hardware Licence v1.2 
+http://www.ohwr.org/attachments/2388/cern_ohl_v_1_2.txt
+Copyright (c) 2017 - by F. Malpartida </text>
+<text x="93.98" y="160.02" size="5.08" layer="97" ratio="12">DC PWM Controller</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -14379,7 +14386,7 @@ http://www.micrel.com/_PDF/mic4420.pdf</description>
 <instance part="GND5" gate="1" x="93.98" y="63.5"/>
 <instance part="R5" gate="R?" x="30.48" y="106.68" smashed="yes">
 <attribute name="NAME" x="19.05" y="108.1786" size="1.778" layer="95"/>
-<attribute name="VALUE" x="24.638" y="112.522" size="1.778" layer="96"/>
+<attribute name="VALUE" x="32.004" y="108.458" size="1.778" layer="96"/>
 </instance>
 <instance part="D4" gate="G$1" x="35.56" y="99.06" smashed="yes" rot="R270">
 <attribute name="NAME" x="37.3126" y="103.632" size="1.778" layer="95" rot="R270"/>
@@ -14396,8 +14403,11 @@ http://www.micrel.com/_PDF/mic4420.pdf</description>
 <instance part="P+1" gate="VCC" x="114.3" y="101.6"/>
 <instance part="GND2" gate="1" x="114.3" y="83.82"/>
 <instance part="IC1" gate="G$1" x="139.7" y="68.58"/>
-<instance part="P+2" gate="VCC" x="137.16" y="86.36"/>
+<instance part="P+2" gate="VCC" x="137.16" y="97.79"/>
 <instance part="GND6" gate="1" x="137.16" y="53.34"/>
+<instance part="C1" gate="G$1" x="144.78" y="88.9"/>
+<instance part="C2" gate="G$1" x="154.94" y="88.9"/>
+<instance part="GND7" gate="1" x="144.78" y="81.28"/>
 </instances>
 <busses>
 </busses>
@@ -14440,10 +14450,17 @@ http://www.micrel.com/_PDF/mic4420.pdf</description>
 <segment>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
 <pinref part="IC1" gate="G$1" pin="VS"/>
-<wire x1="137.16" y1="83.82" x2="137.16" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="95.25" x2="137.16" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="VS1"/>
+<wire x1="137.16" y1="91.44" x2="137.16" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="139.7" y1="76.2" x2="137.16" y2="76.2" width="0.1524" layer="91"/>
 <junction x="137.16" y="76.2"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="154.94" y1="91.44" x2="144.78" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="91.44" x2="137.16" y2="91.44" width="0.1524" layer="91"/>
+<junction x="144.78" y="91.44"/>
+<junction x="137.16" y="91.44"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -14487,6 +14504,13 @@ http://www.micrel.com/_PDF/mic4420.pdf</description>
 <pinref part="IC1" gate="G$1" pin="GND1"/>
 <wire x1="139.7" y1="60.96" x2="137.16" y2="60.96" width="0.1524" layer="91"/>
 <junction x="137.16" y="60.96"/>
+</segment>
+<segment>
+<pinref part="C1" gate="G$1" pin="2"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="154.94" y1="83.82" x2="144.78" y2="83.82" width="0.1524" layer="91"/>
+<junction x="144.78" y="83.82"/>
 </segment>
 </net>
 <net name="CNTRL" class="0">
@@ -14576,4 +14600,10 @@ http://www.micrel.com/_PDF/mic4420.pdf</description>
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
