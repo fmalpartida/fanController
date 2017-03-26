@@ -14338,7 +14338,7 @@ http://www.micrel.com/_PDF/mic4420.pdf</description>
 <part name="R5" library="SparkFun-Electromechanical" deviceset="TRIMPOT" device="-PTH-KNOB" value="TSR-3386-100K"/>
 <part name="D4" library="diode" deviceset="MBR0520LT" device=""/>
 <part name="D5" library="diode" deviceset="MBR0520LT" device=""/>
-<part name="C5" library="resistor" deviceset="C-EU" device="C0805" value="10nF"/>
+<part name="C5" library="resistor" deviceset="C-EU" device="C0805" value="1nF"/>
 <part name="C6" library="resistor" deviceset="C-EU" device="C0805" value="10nF"/>
 <part name="C7" library="resistor" deviceset="C-EU" device="C0805" value="0.1uF"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>

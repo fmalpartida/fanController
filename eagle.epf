@@ -1,7 +1,6 @@
 [Eagle]
-Version="07 06 00"
+Version="08 01 00"
 Platform="Mac OS X"
-Serial="74150F52C3-LSR-WLM-1SM"
 Globals="Globals"
 Desktop="Desktop"
 
@@ -355,15 +354,7 @@ UsedLibrary="/Users/fmalpartida/Documents/development/GITHub repos/Eagle/Adafrui
 UsedLibrary="/Users/fmalpartida/Documents/development/GITHub repos/Eagle/myLibraries/libraries/microbuilder.lbr"
 UsedLibrary="/Users/fmalpartida/Documents/development/GITHub repos/Eagle/SparkfunLibraries/SparkFun-Electromechanical.lbr"
 UsedLibrary="/Users/fmalpartida/Documents/development/GITHub repos/Eagle/SparkfunLibraries/SparkFun-Connectors.lbr"
-UsedLibrary="/Users/fmalpartida/Documents/development/GITHub repos/Eagle/SparkfunLibraries/SparkFun-PowerIC.lbr"
 UsedLibrary="/Users/fmalpartida/Documents/development/GITHub repos/Eagle/SparkfunLibraries/SparkFun-DiscreteSemi.lbr"
 
-[Win_1]
-Type="Control Panel"
-Loc="0 23 599 422"
-State=2
-Number=0
-
 [Desktop]
-Screen="1680 1050"
-Window="Win_1"
+Screen="640 480"
